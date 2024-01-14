@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordsApp", "WordsApp\WordsApp.csproj", "{2D687D20-A3E9-44AB-9080-B135BC4C4037}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2D687D20-A3E9-44AB-9080-B135BC4C4037}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D687D20-A3E9-44AB-9080-B135BC4C4037}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D687D20-A3E9-44AB-9080-B135BC4C4037}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D687D20-A3E9-44AB-9080-B135BC4C4037}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
