@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.Identity.Web;
 
 namespace WordsApp;
 
@@ -9,7 +10,7 @@ using System.Linq;
 
 [ApiController]
 [Route("[controller]")]
-[Authorize]
+[Authorize(AppServicesAuthenticationDefaults.AuthenticationScheme)]
 public class WeatherForecastController : ControllerBase
 {
     private static readonly string[] _summaries = new[]
