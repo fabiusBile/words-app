@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.Identity.Web;
+using WordsApp.Authentication;
 
 namespace WordsApp;
 
@@ -10,9 +10,16 @@ using System.Linq;
 
 [ApiController]
 [Route("[controller]")]
-// [Authorize]
+[Authorize]
 public class WeatherForecastController : ControllerBase
 {
+    private readonly IWordsAppUser _user;
+
+    public WeatherForecastController(IWordsAppUser user)
+    {
+        _user = user;
+    }
+    
     private static readonly string[] _summaries = new[]
     {
         "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
@@ -21,7 +28,7 @@ public class WeatherForecastController : ControllerBase
     [HttpGet]
     public object Get()
     {
-        return Request.Headers;
+        return _user;
         // var forecast = Enumerable.Range(1, 5).Select(index =>
         //         new WeatherForecast(
         //             DateOnly.FromDateTime(DateTime.Now.AddDays(index)),

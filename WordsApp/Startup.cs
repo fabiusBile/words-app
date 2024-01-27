@@ -1,5 +1,5 @@
 using Microsoft.OpenApi.Models;
-using Microsoft.Identity.Web;
+using WordsApp.Authentication;
 
 namespace WordsApp;
 
@@ -14,8 +14,8 @@ public class Startup
 
     public void ConfigureServices(IServiceCollection services)
     {
-        services.AddAuthentication(AppServicesAuthenticationDefaults.AuthenticationScheme)
-            .AddAppServicesAuthentication();
+        services.AddAuthentication(EasyAuthAuthenticationBuilderExtensions.EASYAUTHSCHEMENAME)
+            .AddAzureContainerAppsEasyAuth();;
         
         services.AddControllers();
         services.AddEndpointsApiExplorer();
@@ -23,6 +23,9 @@ public class Startup
         {
             c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
         });
+
+        services.AddHttpContextAccessor();
+        services.AddAppUser();
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

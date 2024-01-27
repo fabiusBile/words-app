@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordsApp", "WordsApp\WordsApp.csproj", "{0D856E42-9CFC-45FE-9F74-01F68E1DBACC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordsApp.Authentication", "WordsApp.Authentication\WordsApp.Authentication.csproj", "{51769742-3BF1-460E-B030-56ED210ED89C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{0D856E42-9CFC-45FE-9F74-01F68E1DBACC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D856E42-9CFC-45FE-9F74-01F68E1DBACC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D856E42-9CFC-45FE-9F74-01F68E1DBACC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51769742-3BF1-460E-B030-56ED210ED89C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51769742-3BF1-460E-B030-56ED210ED89C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51769742-3BF1-460E-B030-56ED210ED89C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51769742-3BF1-460E-B030-56ED210ED89C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
