@@ -1,4 +1,4 @@
-namespace WordsApp.Authentication;
+namespace WordsApp.Domain.User;
 
 public interface IWordsAppUser
 {

@@ -20,6 +20,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\WordsApp.Authentication\WordsApp.Authentication.csproj" />
+      <ProjectReference Include="..\WordsApp.Persistence\WordsApp.Persistence.csproj" />
     </ItemGroup>
 
 </Project>

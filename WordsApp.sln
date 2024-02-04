@@ -4,6 +4,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordsApp", "WordsApp\WordsA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordsApp.Authentication", "WordsApp.Authentication\WordsApp.Authentication.csproj", "{51769742-3BF1-460E-B030-56ED210ED89C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordsApp.Persistence", "WordsApp.Persistence\WordsApp.Persistence.csproj", "{3160A67F-018C-4000-9258-738C24F1CFA1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordsApp.Domain", "WordsApp.Domain\WordsApp.Domain.csproj", "{722C98A5-D230-400D-BC38-137594A1816E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +22,13 @@ Global
 		{51769742-3BF1-460E-B030-56ED210ED89C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51769742-3BF1-460E-B030-56ED210ED89C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51769742-3BF1-460E-B030-56ED210ED89C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3160A67F-018C-4000-9258-738C24F1CFA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3160A67F-018C-4000-9258-738C24F1CFA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3160A67F-018C-4000-9258-738C24F1CFA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3160A67F-018C-4000-9258-738C24F1CFA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{722C98A5-D230-400D-BC38-137594A1816E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{722C98A5-D230-400D-BC38-137594A1816E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{722C98A5-D230-400D-BC38-137594A1816E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{722C98A5-D230-400D-BC38-137594A1816E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

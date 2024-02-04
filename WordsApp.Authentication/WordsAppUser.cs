@@ -2,6 +2,7 @@ using System.Security.Authentication;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Identity.Web;
+using WordsApp.Domain.User;
 
 namespace WordsApp.Authentication;
 

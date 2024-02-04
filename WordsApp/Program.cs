@@ -12,5 +12,8 @@ public class Program
             .ConfigureWebHostDefaults(webBuilder =>
             {
                 webBuilder.UseStartup<Startup>();
+                webBuilder.ConfigureAppConfiguration(
+                    e => e.AddJsonFile("appsettings.local.json", optional: true, reloadOnChange: true)
+                );
             });
 }

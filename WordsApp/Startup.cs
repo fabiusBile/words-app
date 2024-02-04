@@ -1,5 +1,6 @@
 using Microsoft.OpenApi.Models;
 using WordsApp.Authentication;
+using WordsApp.Persistence;
 
 namespace WordsApp;
 
@@ -15,17 +16,20 @@ public class Startup
     public void ConfigureServices(IServiceCollection services)
     {
         services.AddAuthentication(EasyAuthAuthenticationBuilderExtensions.EASYAUTHSCHEMENAME)
-            .AddAzureContainerAppsEasyAuth();;
-        
-        services.AddControllers();
-        services.AddEndpointsApiExplorer();
-        services.AddSwaggerGen(c =>
-        {
-            c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
-        });
+            .AddAzureContainerAppsEasyAuth();
 
-        services.AddHttpContextAccessor();
-        services.AddAppUser();
+        services.AddControllers();
+        services.AddEndpointsApiExplorer()
+            .AddSwaggerGen(c => { c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" }); })
+            .AddHttpContextAccessor();
+
+        AddAppServices(services);
+    }
+
+    private static void AddAppServices(IServiceCollection services)
+    {
+        services.AddAppUser()
+                .AddPersistence();
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -36,13 +40,10 @@ public class Startup
         app.UseHttpsRedirection();
 
         app.UseRouting();
-        
+
         app.UseAuthentication();
         app.UseAuthorization();
-        
-        app.UseEndpoints(endpoints =>
-        {
-            endpoints.MapControllers();
-        });
+
+        app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
     }
 }
