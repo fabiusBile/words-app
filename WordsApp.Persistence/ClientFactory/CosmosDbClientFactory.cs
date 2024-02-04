@@ -14,7 +14,7 @@ public class CosmosDbClientFactory : ICosmosDbClientFactory
     
     public CosmosDbClientFactory(IConfiguration configuration)
     {
-        _endpoint = configuration["AZURE_COSMOS_DB_NOSQL_ENDPOINT"] 
+        _endpoint = configuration["AZURE_COSMOS_CONNECTIONSTRING"] 
                     ?? throw new ConfigurationErrorsException("Missing AZURE_COSMOS_DB_NOSQL_ENDPOINT in configuration");
     }
 
